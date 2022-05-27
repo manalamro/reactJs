@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    background-color:white;
+  }
+
+
+.body {
+    background: rgb(255, 255, 255);
+    flex-grow:3;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+
+img{
+  width: 100%;
+  height: auto;
+  max-height:789px;
+  max-width: 690px;
+  float: left;
+  margin-left: 39%;
+
+}
+
+form {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 auto;
+    max-width: 500px;
+    margin-top: -0.3px;
+}
+ 
+  input {
+  
+    border: 1px solid #9A4726;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 13px;
+    width: 330px;
+    height: 50px;
+    background-color: #FAF4EE;
+    margin-left: -93px;
+    margin-top:-11px;
+    text-align: right;
+    font-family:'Segoe UI';
+
+  }
+ 
+
+h6{
+    text-align:right;
+    color: #9A4726;
+    font-size:20px;
+    padding-right:12px;
+    font-weight:600;
+    
+
+}
+
+button{
+
+    border: 1px solid #9A4726;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 11px;
+    width: 330px;
+    background-color: #9A4726;
+    margin-left: -93px;
+    margin-top:75px;
+    text-align: center;
+    font-family:'Segoe UI';
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+label {
+    
+    display: block;
+    font-size:20px;
+    font-weight: 200;
+    margin-bottom: 5px;
+  }
+ 
+
+.panel {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.header {
+    background: lightblue;
+    min-height: 50px;
+    height: 100%;
+}
+
+
+.body {
+    background: gray;
+    flex-grow: 3;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.sideBarResizeContainer {
+    width: 30%;
+}
+
+.sidebar {
+    background: rgb(255, 255, 255);
+    min-height:789px;
+    min-width: 690px;
+    box-sizing: border-box;
+    text-align: center;
+    flex-grow: 1;
+}
+
+h5{
+ color:#9A4726;
+ font-family: 'Segoe UI';
+ font-weight: bold;
+ font-size:40px;
+ position: relative;
+ margin-bottom: 653px;
+ left: 210px;
+ padding-top:20%;
+
+}
+
+.withMargin {
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.content {
+    flex-grow: 2;  
+    background: white; 
+}
