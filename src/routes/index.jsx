@@ -21,6 +21,14 @@ const IndexRouter = function () {
         }
       />
       <Route
+        path="/"
+        element={
+          <Suspense>
+            <Login />
+          </Suspense>
+        }
+      />
+      <Route
         path="/admin"
         element={
           <PrivateRoute path="/" authorized={[1]}>

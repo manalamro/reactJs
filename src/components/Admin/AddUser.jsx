@@ -8,7 +8,7 @@ const AddUser = ({ createNewUser }) => {
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
-    setUser({ ...user, [name]: value });
+    setUser({ ...user, [name]: name === "isActive" ? (value ? true : false) : value });
   };
 
   const submitNewUser = async () => {
