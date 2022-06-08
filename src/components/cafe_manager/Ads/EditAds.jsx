@@ -6,7 +6,7 @@ const EditAds = ({ promotion, editPromotion, cancelEditAds }) => {
   const handleInputChange = (event) => {
     const target = event.target;
     const name = target.name;
-    const value = target.tagName === "SELECT" ? parseInt(target.value) : target.value;
+    const value = target.value;
     setPromotion({ ...promotionData, [name]: value });
   };
   const submitEdit = () => {
