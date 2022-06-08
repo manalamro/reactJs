@@ -112,6 +112,21 @@ export const updateUser =
             dispatch(isFetching(false));
         }
     };
+export const updatePromotion =
+    (promotion) =>
+    async(dispatch) => {
+        try {
+            dispatch(isFetching(true));
+
+            await usersService.updatePromotion(promotion);
+            const response = await usersService.getPromotions();
+            dispatch(setPromotions(response));
+        } catch (error) {
+            set_error(error);
+        } finally {
+            dispatch(isFetching(false));
+        }
+    };
 export const createUser =
     (user) =>
     async(dispatch) => {

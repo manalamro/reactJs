@@ -14,11 +14,26 @@ const AdsManager = () => {
     dispatch(usersActions.createPromotion(promotion));
   };
 
-  const editAds = (adsId) => {};
+  const editPromotion = (promotionData) => {
+    dispatch(
+      usersActions.updatePromotion({
+        id: promotionData.id,
+        cafeteriaId: promotionData.cafeteriaId,
+        name: promotionData.name,
+        description: promotionData.description,
+        promotionValue: promotionData.promotionValue,
+        isActive: promotionData.isActive ? 1 : 0,
+        isPointsPromotions: promotionData.isPointsPromotions ? 1 : 0,
+        isDiscountPromotions: promotionData.isDiscountPromotions ? 1 : 0,
+      })
+    );
+  };
 
-  const cancelEditAds = () => {};
+  const cancelEditAds = () => {
+    setShowEditAds(false);
+    setSelectPromotion({});
+  };
 
-  const updateEditAds = (ads) => {};
 
   const deleteAds = (adsId) => {
     dispatch(usersActions.deletePromotion(adsId));
@@ -47,7 +62,7 @@ const AdsManager = () => {
         <div className="row">
           <div className="col-3">
             <AddAds createNewAds={createNewAds} />
-            {showEditAds && <EditAds ads={selectPromotion} cancelEditAds={cancelEditAds} updateEditAds={updateEditAds} />}
+            {showEditAds && <EditAds promotion={selectPromotion} cancelEditAds={cancelEditAds} editPromotion={editPromotion} />}
           </div>
           <div className="col-9">
             <AdsData

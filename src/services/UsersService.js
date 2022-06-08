@@ -64,6 +64,13 @@ class UsersService {
         if (!response.success) throw response.error;
         return response.data;
     };
+    updatePromotion = async(
+        promotion
+    ) => {
+        const response = await this.apiService.put(`cafeteria-manager/promotions/${promotion.id}`, promotion);
+        if (!response.success) throw response.error;
+        return response.data;
+    };
 }
 
 export default UsersService;
