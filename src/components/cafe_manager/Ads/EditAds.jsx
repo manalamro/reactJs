@@ -45,7 +45,7 @@ const EditAds = ({ promotion, editPromotion, cancelEditAds }) => {
           </div>
 
           <div className="form-group">
-            <select className="form-control" name="isDiscountPromotion" value={isDiscountPromotions} onChange={handleInputChange}>
+            <select className="form-control" name="isDiscountPromotions" value={isDiscountPromotions} onChange={handleInputChange}>
               <option value={0} disabled>
                 حدد العرض من ضمن عروض الخصومات ام لا{" "}
               </option>
@@ -55,7 +55,7 @@ const EditAds = ({ promotion, editPromotion, cancelEditAds }) => {
           </div>
 
           <div className="form-group">
-            <select className="form-control" name="isPointPromotion" value={isPointsPromotions} onChange={handleInputChange}>
+            <select className="form-control" name="isPointsPromotions" value={isPointsPromotions} onChange={handleInputChange}>
               <option value={0} disabled>
                 حدد العرض من ضمن عروض النقاط ام لا{" "}
               </option>
