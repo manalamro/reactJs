@@ -13,7 +13,7 @@ const EditAds = ({ promotion, editPromotion, cancelEditAds }) => {
     editPromotion(promotionData);
   };
 
-  const { id, cafeteriaId, name, description, promotionValue, isActive, isPointsPromotions, isDiscountPromotions } = promotion;
+  const { id, cafeteriaId, name, description, promotionValue, isActive, isPointsPromotions, isDiscountPromotions } = promotionData;
   return (
     <div>
       <div className="card w-100 mt-2 border-danger">
