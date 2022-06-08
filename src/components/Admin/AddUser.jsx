@@ -76,7 +76,7 @@ const AddUser = ({ createNewUser }) => {
                     marginRight: 10,
                   }}
                 >
-                  نشط
+                  فعال
                 </label>
                 <input type="checkbox" name="isActive" id="isActive" value={user.isActive} onChange={handleChange} />
               </div>
