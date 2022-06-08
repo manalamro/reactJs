@@ -6,13 +6,13 @@ const EditUser = ({ user, updateEditUser, cancelEditUser }) => {
   const handleInputChange = (event) => {
     const target = event.target;
     const name = target.name;
-    const value = target.tagName === "SELECT" ? parseInt(target.value) : target.value;
+    const value = target.value;
     setUser({ ...user, [name]: value });
   };
   const submitEdit = () => {
     updateEditUser(userInfo);
   };
-  const { id, username, phone, email, usersRoleId } = userInfo;
+  const { id, username, phone, email, isActive } = userInfo;
   return (
     <div className="card w-100 mt-2">
       <div className="card-header " style={{ background: "#9A4726", color: "white" }}>
@@ -32,16 +32,14 @@ const EditUser = ({ user, updateEditUser, cancelEditUser }) => {
         </div>
 
         <div className="form-group">
-          <select className="form-control" name="usersRoleId" value={usersRoleId} onChange={handleInputChange}>
+          <select className="form-control" name="isActive" value={isActive} defaultValue={0} onChange={handleInputChange}>
             <option value={0} disabled>
-              دور المستخدم
+              حدد حالة العرض
             </option>
-            <option value={4}>مسؤول الكافيتريا</option>
-            <option value={2}>زبون</option>
-            <option value={3}>بائع</option>
+            <option value={true}>فعال</option>
+            <option value={false}>غير فعال</option>
           </select>
         </div>
-
         <button type="reset" className="btn btn-block" style={{ backgroundColor: "#9A4726", color: "white" }} onClick={submitEdit}>
           <i className="fa fa-edit"></i>تعديل
         </button>

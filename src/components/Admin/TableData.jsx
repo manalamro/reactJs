@@ -13,6 +13,9 @@ const TableData = ({ users, editUser, deleteUser }) => {
             <th style={{ paddingLeft: "6px" }} scope="col">
               اسم المستخدم
             </th>
+            <th style={{ paddingLeft: "6px" }} scope="col">
+              الحساب فعال
+            </th>
             <th style={{ paddingLeft: "85px" }} scope="col">
               ايميل
             </th>

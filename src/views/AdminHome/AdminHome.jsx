@@ -27,6 +27,7 @@ const AdminHome = () => {
         phone: userData.phone,
         email: userData.email,
         usersRoleId: userData.usersRoleId,
+        isActive: userData.isActive === "true" ? true : false,
       })
     );
   };

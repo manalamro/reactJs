@@ -19,6 +19,7 @@ const TableDataRow = ({ user, editUser, deleteUser, order }) => {
     <tr>
       <th scope="row">{order + 1}</th>
       <td>{user.username}</td>
+      <td>{user.isActive ? "فعال" : "غير فعال"}</td>
       <td>{user.email}</td>
       <td>{user.phone}</td>
       <td>{roleName(user.usersRoleId)}</td>
